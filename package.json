@@ -1,22 +1,35 @@
 {
   "name": "unified-analytics-mohit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Unified analytics library supporting multiple providers (Countly, PostHog) for React Native and Web",
   "type": "module",
   "main": "./index.js",
   "module": "./index.js",
+  "types": "./index.d.ts",
   "files": [
     "index.js",
     "hooks.js",
     "context.js",
+    "index.d.ts",
+    "hooks.d.ts",
+    "context.d.ts",
     "src",
     "README.md",
     "LICENSE"
   ],
   "exports": {
-    ".": "./index.js",
-    "./hooks": "./hooks.js",
-    "./context": "./context.js"
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    },
+    "./hooks": {
+      "types": "./hooks.d.ts",
+      "import": "./hooks.js"
+    },
+    "./context": {
+      "types": "./context.d.ts",
+      "import": "./context.js"
+    }
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
