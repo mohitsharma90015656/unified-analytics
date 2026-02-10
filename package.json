@@ -1,0 +1,56 @@
+{
+  "name": "unified-analytics-mohit",
+  "version": "1.0.0",
+  "description": "Unified analytics library supporting multiple providers (Countly, PostHog) for React Native and Web",
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.js",
+  "files": [
+    "index.js",
+    "hooks.js",
+    "context.js",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./hooks": "./hooks.js",
+    "./context": "./context.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "analytics",
+    "countly",
+    "posthog",
+    "react-native",
+    "react",
+    "nextjs",
+    "web"
+  ],
+  "author": "ANTZ Systems",
+  "license": "MIT",
+  "dependencies": {},
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react-native": {
+      "optional": true
+    },
+    "countly-sdk-react-native-bridge": {
+      "optional": true
+    },
+    "posthog-react-native": {
+      "optional": true
+    },
+    "countly-sdk-web": {
+      "optional": true
+    },
+    "posthog-js": {
+      "optional": true
+    }
+  }
+}

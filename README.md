@@ -17,9 +17,14 @@ A **pure facade layer** for analytics that provides a single, unified API across
 
 ## Installation
 
-1. Copy this library to your project (e.g., `libs/unified-analytics`)
+```bash
+npm install unified-analytics-mohit
+# or
+yarn add unified-analytics-mohit
+```
 
 2. Install the provider SDK(s) you want to use:
+
 
 **React Native:**
 ```bash
@@ -48,7 +53,7 @@ yarn add posthog-js
 
 ```javascript
 // App.js
-import { analytics, AnalyticsProvider } from './libs/unified-analytics';
+import { analytics, AnalyticsProvider } from 'unified-analytics-mohit';
 
 await analytics.init({
   platform: 'native', // optional, auto-detected
@@ -81,7 +86,7 @@ export default function App() {
 #### 2. Setup Navigation Tracking (React Navigation)
 
 ```javascript
-import { analytics } from './libs/unified-analytics';
+import { analytics } from 'unified-analytics-mohit';
 
 function App() {
   const navigationRef = useRef();
@@ -108,7 +113,7 @@ function App() {
 
 ```javascript
 // _app.js or layout.js
-import { analytics, AnalyticsProvider } from 'unified-analytics';
+import { analytics, AnalyticsProvider } from 'unified-analytics-mohit';
 
 await analytics.init({
   platform: 'web',
@@ -139,7 +144,7 @@ await analytics.init({
 **Next.js Pages Router:**
 ```javascript
 import Router from 'next/router';
-import { analytics } from 'unified-analytics';
+import { analytics } from 'unified-analytics-mohit';
 
 const { onRouteChange } = analytics.createWebNavigationHandlers();
 Router.events.on('routeChangeComplete', onRouteChange);
@@ -149,7 +154,7 @@ Router.events.on('routeChangeComplete', onRouteChange);
 ```javascript
 'use client';
 import { usePathname } from 'next/navigation';
-import { analytics } from 'unified-analytics';
+import { analytics } from 'unified-analytics-mohit';
 import { useEffect, useRef } from 'react';
 
 function NavigationTracker() {
@@ -167,7 +172,7 @@ function NavigationTracker() {
 **React Router:**
 ```javascript
 import { useLocation } from 'react-router-dom';
-import { analytics } from 'unified-analytics';
+import { analytics } from 'unified-analytics-mohit';
 import { useEffect, useRef } from 'react';
 
 function NavigationTracker() {
@@ -187,7 +192,7 @@ function NavigationTracker() {
 ### 3. Use in Components (Same on Both Platforms)
 
 ```javascript
-import { useAnalytics } from 'unified-analytics';
+import { useAnalytics } from 'unified-analytics-mohit';
 
 function MyComponent() {
   const {
@@ -254,7 +259,7 @@ Auto-detection logic:
 ### Platform Utilities
 
 ```javascript
-import { setPlatform, getPlatform, isWeb, isNative } from 'unified-analytics';
+import { setPlatform, getPlatform, isWeb, isNative } from 'unified-analytics-mohit';
 
 console.log(getPlatform()); // 'web' or 'native'
 console.log(isWeb());       // true/false

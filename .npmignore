@@ -1,0 +1,9 @@
+.git
+.gitignore
+.github
+docs
+*.log
+workspace.code-workspace
+.vshistory
+node_modules
+.DS_Store
