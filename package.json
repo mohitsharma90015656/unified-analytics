@@ -1,6 +1,6 @@
 {
   "name": "unified-analytics-mohit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unified analytics library supporting multiple providers (Countly, PostHog) for React Native and Web",
   "type": "module",
   "main": "./index.js",
